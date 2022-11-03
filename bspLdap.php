@@ -9,8 +9,8 @@ Fincance&Information Tech.
 */
 
 //Server Variable || Silahkan Ubah disini
-$domain = "@bsp.co.id";
-$ldapServer = "ldap://10.20.7.40"; //BSP AD Zamrud
+$domain = "@bsp.co.id"; //Ganti dengan TLD yang sesuai
+$ldapServer = "ldap://10.20.7.40"; //Ganti dengan server Active Directory
 $port = 389;
 
 class LdapProcess {
@@ -39,7 +39,7 @@ class LdapProcess {
 
 		if ($bind) {
 			$filter = "(sAMAccountName=$userName)";
-			$result = ldap_search($ldap,"dc=bsp,dc=co,dc=id",$filter);
+			$result = ldap_search($ldap,"dc=bsp,dc=co,dc=id",$filter); //Ganti Paramater DC yang sesuai
 			//@ldap_sort($ldap, $result, "sn");
 			$info = ldap_get_entries($ldap, $result);
 			if (count($info) > 0){
