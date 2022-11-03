@@ -3,7 +3,7 @@ include_once "bspLdap.php";
 
 //Supplied Username and Password or from submit form
 $userName = "agus.ramadona";
-$password = "Forced2000";
+$password = "passwordkuJadul";
 
 $connUser = new LdapProcess();
 $connUser->ConnectionProcessing($userName,$password);
@@ -64,27 +64,7 @@ echo $resLogin;
 echo "<br>";
 
 $info1 = $connUser->userData();
-/*
-var_dump($info1);
-echo "==============================<br>";
-echo $info1[0]["cn"][0];
-echo "<br>";
-echo $info1[0]["sn"][0];
-echo "<br>";
-echo $info1[0]["title"][0];
-echo "<br>";
-echo $info1[0]["givenname"][0];
-echo "<br>";
-echo $info1[0]["displayname"][0];
-echo "<br>";
-echo $info1[0]["co"][0];
-echo "<br>";
-echo $info1[0]["department"][0];
-echo "<br>";
-echo $info1[0]["company"][0];
-echo "<br>";
-echo $info1[0]["samaccountname"][0];
-echo "<br>";
-echo $info1[0]["mail"][0];
-*/
+
+//var_dump($info1);
+
 ?>
